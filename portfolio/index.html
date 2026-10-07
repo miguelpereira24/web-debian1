@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Miguel Pereira</title>
+<style>
+:root{--bg:#0b1512;--tx:#e8f5f0;--cd:rgba(255,255,255,.06);--bd:rgba(255,255,255,.13);--a:#10a37f;--c:#4ff0c0;--gr:#9fc4b8;--g2:#0f3a33}
+body.claro{--bg:#eef7f4;--tx:#16302a;--cd:rgba(255,255,255,.92);--bd:rgba(0,0,0,.12);--c:#0b7a5f;--gr:#4b6b61;--g2:#d3f1e8}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;transition:background .4s,color .4s}
+.fondo{position:fixed;inset:0;z-index:-3;background:linear-gradient(120deg,var(--bg),var(--g2),var(--bg));background-size:300% 300%;animation:mv 14s ease infinite}
+@keyframes mv{50%{background-position:100% 50%}}
+#part{position:fixed;inset:0;z-index:-2;pointer-events:none}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--c));z-index:60}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:12px 4%;background:var(--cd);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.logo{font-weight:700;font-size:1.2rem;color:var(--tx);text-decoration:none}.logo span{color:var(--c)}
+nav ul{display:flex;list-style:none;gap:15px;align-items:center}
+nav ul a{color:var(--tx);text-decoration:none;font-size:.9rem;padding-bottom:3px;border-bottom:2px solid transparent;transition:.3s}
+nav ul a:hover,nav ul a.on{color:var(--c);border-color:var(--c)}
+#tema,#menu{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:1rem}
+#menu{display:none;border-radius:8px}
+section{max-width:1080px;margin:auto;padding:90px 5% 20px}
+h1{font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.1;background:linear-gradient(90deg,var(--tx),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{color:var(--c);text-transform:uppercase;letter-spacing:2px;font-size:1.2rem;margin-bottom:24px}
+h2::after{content:"";display:block;width:60px;height:3px;margin-top:8px;background:var(--a);border-radius:3px}
+h2 small{display:block;text-transform:none;letter-spacing:0;color:var(--gr);font-weight:400;font-size:.9rem;margin-top:4px}
+.btn{display:inline-block;margin:6px 6px 6px 0;padding:12px 26px;border-radius:30px;border:2px solid var(--a);background:var(--a);color:#fff;text-decoration:none;cursor:pointer;font-size:1rem;font-family:inherit;transition:.3s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 8px 24px var(--a)}.btn.v{background:transparent;color:var(--tx)}
+#inicio{min-height:100vh;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.hola{color:var(--c);letter-spacing:3px}
+#typ{font-size:1.3rem;color:var(--c);min-height:36px;margin:12px 0 16px}
+.lema{color:var(--gr);max-width:580px;margin-bottom:18px}
+.foto{position:relative;width:230px;height:230px;border-radius:50%;padding:7px;animation:fl 4s ease-in-out infinite}
+.foto::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--c),var(--a),transparent,var(--c));animation:gi 4s linear infinite}
+.foto .in{position:relative;width:100%;height:100%;border-radius:50%;background:#12453b;color:#fff;display:grid;place-items:center;font-size:4rem;font-weight:700;overflow:hidden}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@keyframes gi{to{transform:rotate(360deg)}}@keyframes fl{50%{transform:translateY(-12px)}}
+.rej{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.t{display:block;color:inherit;text-decoration:none;background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:22px;margin-bottom:16px;transition:transform .15s,border-color .3s}
+.rej .t,.dos .t{margin-bottom:0}.t:hover{border-color:var(--c)}
+.t h3{color:var(--c);margin:6px 0}.t small,.gr{color:var(--gr)}.t ul{padding-left:20px;margin-top:8px}
+.et{display:inline-block;margin-top:8px;padding:2px 12px;border-radius:12px;background:var(--a);color:#fff;font-size:.8rem}
+.ic{font-size:2.1rem}
+.chips span{display:inline-block;margin:4px;padding:6px 14px;border-radius:20px;border:1px solid var(--a);transition:.3s}
+.chips span:hover{background:var(--a);color:#fff;transform:translateY(-3px)}
+.cont{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.cont .t{text-align:center;margin:0}.num{font-size:2.3rem;font-weight:700;color:var(--c)}
+.fila{display:flex;justify-content:space-between;gap:10px}
+.barra{background:var(--bd);height:10px;border-radius:10px;margin:6px 0 16px;overflow:hidden}
+.barra div{height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--c));transition:width 1.6s}
+.linea{border-left:3px solid var(--a);padding-left:26px;margin-left:8px}
+.linea .t{position:relative}
+.linea .t::before{content:"";position:absolute;left:-37px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.filtros{margin-bottom:22px}
+.filtros button{margin:4px 8px 4px 0;padding:8px 20px;border-radius:20px;border:1px solid var(--a);background:transparent;color:var(--tx);cursor:pointer;transition:.3s}
+.filtros button:hover,.filtros button.on{background:var(--a);color:#fff}
+.proy{cursor:pointer}
+#vent{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:70;align-items:center;justify-content:center;padding:20px}
+#vent.ab{display:flex}
+.cuerpo{background:var(--bg);border:1px solid var(--a);border-radius:18px;padding:28px;max-width:640px;width:100%;max-height:88vh;overflow:auto;animation:su .4s}
+.cuerpo h3{color:var(--c);font-size:1.4rem;margin-bottom:10px}.cuerpo ul,.cuerpo ol{margin:10px 0 14px 22px}
+pre{background:#05100d;color:#4ff0c0;padding:14px;border-radius:10px;overflow:auto;font-size:.85rem;margin:10px 0}
+.term{background:#05100d;border:1px solid var(--bd);border-radius:14px;overflow:hidden;font-family:Consolas,monospace}
+.term .bar2{background:#12201c;padding:8px 14px;display:flex;gap:6px;align-items:center;color:#9fc4b8;font-size:.8rem}
+.term .bar2 i{width:11px;height:11px;border-radius:50%;background:#ff5f56}.term .bar2 i:nth-child(2){background:#ffbd2e}.term .bar2 i:nth-child(3){background:#27c93f}
+.term pre{margin:0;border-radius:0;min-height:170px;font-size:.9rem}
+form{display:grid;gap:12px;max-width:580px}
+input,textarea{padding:13px;border-radius:10px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);font-size:1rem;font-family:inherit}
+input:focus,textarea:focus{outline:2px solid var(--c)}
+.r{opacity:0}.r.v2{opacity:1;animation:su .9s backwards}
+@keyframes su{from{opacity:0;transform:translateY(36px)}}
+#sube{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:none;background:var(--a);color:#fff;font-size:1.3rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#sube.ver{opacity:1;pointer-events:auto}
+footer{text-align:center;padding:34px;color:var(--gr);font-size:.85rem}
+@media(max-width:900px){#menu{display:block}
+nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px;border-bottom:1px solid var(--bd)}
+nav ul.ab{display:flex}#inicio,.dos{grid-template-columns:1fr}#inicio{text-align:center;justify-items:center}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#inicio">Miguel<span>.</span>Portfolio</a><button id="menu">☰</button>
+<ul id="en"><li><a href="#inicio">Inicio</a></li><li><a href="#sobre">Sobre mí</a></li><li><a href="#servicios">Qué hago</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#lab">Laboratorio</a></li><li><a href="#habilidades">Habilidades</a></li><li><a href="#contacto">Contacto</a></li><li><a data-go="cv" href="#">Mi CV</a></li><li><button id="tema"></button></li></ul></nav>
+
+<section id="inicio">
+<div class="foto"><div class="in">MP<img src="images/foto.jpg" alt="Miguel" onerror="this.remove()"></div></div>
+<div><p class="hola">MI PORTFOLIO</p><h1>Proyectos de sistemas y redes</h1>
+<p id="typ" data-f="Servidores Apache en Debian|Máquinas virtuales y redes|Webs con HTML, CSS y JavaScript|Despliegues con Git y GitHub Pages"></p>
+<p class="lema">Soy Miguel Pereira, estudiante de ASIR en U-tad. Aquí reúno las prácticas y proyectos con los que aprendo a montar, configurar y publicar sistemas y servicios.</p>
+<a class="btn" href="#proyectos">Ver proyectos</a><a class="btn v" data-go="cv" href="#">← Volver a mi CV</a></div>
+</section>
+
+<section><div class="cont r">
+<div class="t"><div class="num" data-n="6">0</div>Proyectos</div>
+<div class="t"><div class="num" data-n="12">0</div>Tecnologías</div>
+<div class="t"><div class="num" data-n="2">0</div>Webs publicadas</div>
+<div class="t"><div class="num" data-n="2">0</div>Puertos Apache</div>
+<div class="t"><div class="num" data-n="100" data-s="%">0</div>Ganas de aprender</div></div></section>
+
+<section id="sobre"><h2>Sobre mí<small>El perfil detrás de los proyectos</small></h2>
+<div class="dos">
+<div class="t r"><h3>Quién soy</h3><p>Soy Miguel Pereira Trinidad, de Guadarrama (Madrid). Estudio el Técnico Superior en Administración de Sistemas Informáticos en Red en U-tad (2025-2027).</p><p style="margin-top:10px">Me interesan las redes, los sistemas operativos y la virtualización. Soy responsable, puntual y me gusta trabajar en equipo y seguir aprendiendo.</p></div>
+<div class="linea"><div class="t r"><span class="et">2023 - 2025</span><h3>Bachillerato</h3><small>Gredos San Diego</small></div>
+<div class="t r"><span class="et">2025</span><h3>Portero y controlador de acceso</h3><small>Limgesma</small></div>
+<div class="t r"><span class="et">2025 - 2027</span><h3>ASIR · en curso</h3><small>U-tad, Las Rozas</small></div></div></div></section>
+
+<section id="servicios"><h2>Qué sé hacer<small>Áreas en las que trabajo</small></h2>
+<div class="rej">
+<div class="t r"><div class="ic">🖥️</div><h3>Servidores web</h3><p>Instalar y configurar Apache, VirtualHosts, permisos y logs.</p></div>
+<div class="t r"><div class="ic">📦</div><h3>Virtualización</h3><p>Crear y configurar máquinas virtuales con Debian.</p></div>
+<div class="t r"><div class="ic">🌐</div><h3>Redes</h3><p>Direccionamiento IP, modos de red y comprobación con ping.</p></div>
+<div class="t r"><div class="ic">🎨</div><h3>Desarrollo web</h3><p>Webs responsive y animadas con HTML, CSS y JavaScript.</p></div>
+<div class="t r"><div class="ic">🚀</div><h3>Despliegue</h3><p>Control de versiones con Git y publicación en GitHub Pages.</p></div>
+<div class="t r"><div class="ic">🔐</div><h3>Permisos Linux</h3><p>Usuarios, propietarios y permisos con chown y chmod.</p></div></div></section>
+
+<section id="proyectos"><h2>Proyectos<small>Pulsa en uno para ver los detalles</small></h2>
+<div class="filtros"><button class="on" data-t="todos">Todos</button><button data-t="servidores">Servidores</button><button data-t="web">Web</button><button data-t="redes">Redes</button></div>
+<div class="rej" id="lista"></div></section>
+
+<section id="lab"><h2>Laboratorio<small>Comandos que uso en mis prácticas</small></h2>
+<div class="term r"><div class="bar2"><i></i><i></i><i></i>&nbsp;debian@debian: ~</div><pre id="consola"></pre></div></section>
+
+<section id="habilidades"><h2>Habilidades<small>Técnicas y herramientas</small></h2>
+<div class="dos">
+<div class="t r">
+<div class="fila"><span>Redes informáticas</span><span>70%</span></div><div class="barra"><div data-n="70"></div></div>
+<div class="fila"><span>Sistemas operativos</span><span>75%</span></div><div class="barra"><div data-n="75"></div></div>
+<div class="fila"><span>Virtualización</span><span>70%</span></div><div class="barra"><div data-n="70"></div></div>
+<div class="fila"><span>Apache / LAMP</span><span>60%</span></div><div class="barra"><div data-n="60"></div></div>
+<div class="fila"><span>HTML, CSS y JavaScript</span><span>55%</span></div><div class="barra"><div data-n="55"></div></div>
+<div class="fila"><span>Git y GitHub</span><span>50%</span></div><div class="barra"><div data-n="50"></div></div></div>
+<div class="t r chips"><h3>Tecnologías</h3><span>Debian</span><span>Windows</span><span>Apache</span><span>Git</span><span>GitHub</span><span>GitHub Pages</span><span>VirtualBox</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>SSH</span><span>Terminal Linux</span></div></div></section>
+
+<section id="contacto"><h2>Contacto<small>¿Tienes un proyecto en mente?</small></h2>
+<div class="rej">
+<div class="t r"><div class="ic">📞</div><h3>Teléfono</h3>640618792</div>
+<div class="t r"><div class="ic">✉️</div><h3>Correo</h3>pereiratrinidadm@gmail.com</div>
+<div class="t r"><div class="ic">📍</div><h3>Ubicación</h3>Guadarrama (Madrid)</div>
+<a class="t r" href="https://www.linkedin.com/in/miguel-pereira-trinidad" target="_blank"><div class="ic">🔗</div><h3>LinkedIn</h3>miguel-pereira-trinidad</a></div>
+<h2 style="margin-top:36px">Escríbeme</h2>
+<form class="r"><input id="fn" placeholder="Tu nombre" required><input id="fc" type="email" placeholder="Tu correo" required><textarea id="fm" rows="5" placeholder="Tu mensaje" required></textarea><button class="btn" type="submit">Enviar por correo</button></form>
+<p style="margin-top:26px"><a class="btn v" data-go="cv" href="#">← Volver a mi CV</a></p></section>
+
+<div id="vent"><div class="cuerpo"><h3 id="vt"></h3><p id="vx"></p><div id="vp"></div><button class="btn" id="cerrar">Cerrar</button></div></div>
+<footer>© 2026 Miguel Pereira Trinidad · ASIR 2 · U-tad</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+document.body.prepend(Object.assign(document.createElement("div"),{className:"fondo"}));
+const cv=Object.assign(document.createElement("canvas"),{id:"part"});document.body.prepend(cv);
+const pg=Object.assign(document.createElement("div"),{id:"prog"});document.body.prepend(pg);
+const up=Object.assign(document.createElement("button"),{id:"sube",textContent:"↑"});document.body.append(up);
+up.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+const bt=$("#tema");try{if(localStorage.getItem("tema-port")==="claro")document.body.classList.add("claro")}catch(e){}
+const ico=()=>bt.textContent=document.body.classList.contains("claro")?"☀️":"🌙";ico();
+bt.onclick=()=>{document.body.classList.toggle("claro");try{localStorage.setItem("tema-port",document.body.classList.contains("claro")?"claro":"oscuro")}catch(e){}ico()};
+const en=$("#en");$("#menu").onclick=()=>en.classList.toggle("ab");en.querySelectorAll("a").forEach(a=>a.onclick=()=>en.classList.remove("ab"));
+const secs=$$("section[id]");
+addEventListener("scroll",()=>{const h=document.documentElement.scrollHeight-innerHeight;
+pg.style.width=(h>0?scrollY/h*100:0)+"%";up.classList.toggle("ver",scrollY>400);
+let a="inicio";secs.forEach(s=>{if(scrollY>=s.offsetTop-160)a=s.id});
+en.querySelectorAll("a[href^='#']").forEach(x=>x.classList.toggle("on",x.getAttribute("href")==="#"+a))});
+
+const PR=[
+{i:"🖥️",t:"Servidor LAMP con Apache",k:"servidores",r:"Dos webs estáticas en Debian sin dominio.",x:"Instalé Apache en una máquina virtual Debian y publiqué dos webs con VirtualHosts por puerto: el CV en el 8081 y el portfolio en el 8082.",p:["Añadir Listen 8081 y 8082 en ports.conf","Crear cv.conf y portfolio.conf en sites-available","Activar con a2ensite y recargar Apache","Probar en http://localhost:8081 y :8082"],c:"sudo a2ensite cv.conf portfolio.conf\nsudo apache2ctl configtest\nsudo systemctl reload apache2",tg:["Debian","Apache2","VirtualHost"]},
+{i:"🚀",t:"Despliegue en GitHub Pages",k:"web",r:"Publicación de las webs en un hosting externo.",x:"Subí las webs a un repositorio de GitHub y activé Pages. Es un hosting estático: no ejecuta PHP.",p:["Crear el repositorio en GitHub","Subir las carpetas cv y portfolio","Activar Pages desde Settings → Pages","Comprobar que las rutas son relativas"],c:"git init\ngit add .\ngit commit -m \"Mis webs\"\ngit push -u origin main",tg:["Git","GitHub","Hosting estático"]},
+{i:"💻",t:"Mi CV web",k:"web",r:"Currículum animado de una sola página.",x:"Web de mi currículum con partículas, barras de nivel, contadores, pestañas, modo claro y oscuro, y exportación a PDF.",p:["HTML semántico por secciones","CSS con variables y animaciones","JavaScript con IntersectionObserver","Diseño adaptable a móvil"],c:"",tg:["HTML5","CSS3","JavaScript"]},
+{i:"🌐",t:"Redes y direccionamiento",k:"redes",r:"Redes locales en máquinas virtuales.",x:"Configuración de direcciones IP y modos de red en VirtualBox para comunicar máquinas virtuales.",p:["Modos NAT y adaptador puente","Consultar la IP con ip a","Comprobar conectividad con ping"],c:"ip a\nping -c 4 192.168.1.1",tg:["IP","VirtualBox","ping"]},
+{i:"📦",t:"Máquinas virtuales",k:"servidores",r:"Debian en VirtualBox.",x:"Instalación y configuración de sistemas operativos en máquinas virtuales, incluido el teclado y el sistema de paquetes.",p:["Crear la VM y asignar recursos","Instalar Debian","Configurar el teclado en español","Instalar paquetes con apt"],c:"sudo apt update\nsudo apt install apache2 unzip git -y",tg:["VirtualBox","Debian","apt"]},
+{i:"🔐",t:"Usuarios y permisos en Linux",k:"redes",r:"Gestión de usuarios y permisos.",x:"Gestión de propietarios y permisos de archivos y carpetas para que Apache pueda servir las webs sin errores 403.",p:["Entender los permisos rwx","Cambiar propietario a www-data","Aplicar 755 a carpetas y 644 a archivos"],c:"sudo chown -R www-data:www-data /var/www\nsudo find /var/www -type d -exec chmod 755 {} \\;",tg:["chown","chmod","Seguridad"]}];
+const L=$("#lista"),V=$("#vent");
+function mostrar(k){L.innerHTML="";PR.forEach((p,n)=>{if(k!=="todos"&&p.k!==k)return;
+const d=document.createElement("div");d.className="t proy";d.style.animation="su .6s "+n*.08+"s backwards";
+d.innerHTML=`<div class="ic">${p.i}</div><h3>${p.t}</h3><p>${p.r}</p><span class="et">${p.k}</span>`;
+d.onclick=()=>abrir(p);d3(d);L.appendChild(d)})}
+function abrir(p){$("#vt").textContent=p.i+" "+p.t;$("#vx").textContent=p.x;
+$("#vp").innerHTML="<b>Pasos:</b><ol>"+p.p.map(x=>"<li>"+x+"</li>").join("")+"</ol>"+(p.c?"<pre></pre>":"")+"<div class='chips'>"+p.tg.map(x=>"<span>"+x+"</span>").join("")+"</div><br>";
+if(p.c)$("#vp pre").textContent=p.c;V.classList.add("ab")}
+$("#cerrar").onclick=()=>V.classList.remove("ab");V.onclick=e=>{if(e.target===V)V.classList.remove("ab")};
+$$(".filtros button").forEach(b=>b.onclick=()=>{$$(".filtros button").forEach(x=>x.classList.remove("on"));b.classList.add("on");mostrar(b.dataset.t)});
+function d3(t){t.addEventListener("mousemove",e=>{const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+t.style.transform=`perspective(700px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`});t.addEventListener("mouseleave",()=>t.style.transform="")}
+$$(".t").forEach(d3);mostrar("todos");
+
+const cmd=["$ sudo apt install apache2 -y","$ sudo a2ensite cv.conf portfolio.conf","$ sudo apache2ctl configtest","Syntax OK","$ curl -I http://localhost:8081","HTTP/1.1 200 OK","$ curl -I http://localhost:8082","HTTP/1.1 200 OK","$ git push -u origin main","✔ Webs publicadas en GitHub Pages"];
+const co=$("#consola");let ci=0,cj=0,tx="";
+(function k(){if(ci>=cmd.length){setTimeout(()=>{co.textContent="";ci=0;cj=0;tx="";k()},3500);return}
+const l=cmd[ci];if(cj<l.length){co.textContent=tx+l.slice(0,++cj)+"▌";setTimeout(k,l.startsWith("$")?45:5)}
+else{tx+=l+"\n";ci++;cj=0;setTimeout(k,l.startsWith("$")?450:150)}})();
+
+function contar(el){const m=+el.dataset.n,s=el.dataset.s||"";let n=0;const p=Math.max(1,Math.ceil(m/60));const t=setInterval(()=>{n+=p;if(n>=m){n=m;clearInterval(t)}el.textContent=n+s},30)}
+const ob=new IntersectionObserver(l=>l.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("v2");
+e.target.querySelectorAll(".barra div").forEach(b=>b.style.width=b.dataset.n+"%");e.target.querySelectorAll(".num").forEach(contar);ob.unobserve(e.target)}),{threshold:.1});
+$$(".r").forEach(e=>ob.observe(e));
+
+const ty=$("#typ"),fr=ty.dataset.f.split("|");let f=0,l=0,bo=false;
+(function w(){const s=fr[f];ty.textContent=s.substring(0,l)+"▌";if(!bo){l++;if(l>s.length){bo=true;setTimeout(w,1500);return}}else{l--;if(l===0){bo=false;f=(f+1)%fr.length}}setTimeout(w,bo?35:75)})();
+$("form").onsubmit=e=>{e.preventDefault();location.href="mailto:pereiratrinidadm@gmail.com?subject="+encodeURIComponent("Contacto desde tu portfolio - "+$("#fn").value)+"&body="+encodeURIComponent($("#fm").value+"\n\n"+$("#fn").value+" ("+$("#fc").value+")")};
+$$("[data-go]").forEach(a=>{
+  if(location.port){a.href="http://"+location.hostname+":8081/";}
+  else{a.href=location.pathname.replace(/\/portfolio(\/index\.html|\/)?$/,"/cv/");}
+});
+
+const cx=cv.getContext("2d");let W,H;const P=[];const aj=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};aj();addEventListener("resize",aj);
+for(let i=0;i<65;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5});
+(function d(){cx.clearRect(0,0,W,H);const c=getComputedStyle(document.body).getPropertyValue("--c").trim();cx.fillStyle=c;cx.strokeStyle=c;
+P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;cx.globalAlpha=.6;cx.beginPath();cx.arc(p.x,p.y,2,0,7);cx.fill();
+for(let j=i+1;j<P.length;j++){const q=P[j],k=Math.hypot(p.x-q.x,p.y-q.y);if(k<110){cx.globalAlpha=.15*(1-k/110);cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}});requestAnimationFrame(d)})();
+</script>
+</body>
+</html>

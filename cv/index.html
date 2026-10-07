@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miguel Pereira Trinidad - Curriculum</title>
+<style>
+:root{--bg:#0b1020;--tx:#e8eef7;--cd:rgba(255,255,255,.06);--bd:rgba(255,255,255,.13);--a:#2a7ab9;--c:#5fd0ff;--gr:#9fb3cc;--g2:#1c2b45}
+body.claro{--bg:#eef3fa;--tx:#1b2433;--cd:rgba(255,255,255,.92);--bd:rgba(0,0,0,.12);--c:#1a6fb0;--gr:#4b5b73;--g2:#d6e6f7}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;transition:background .4s,color .4s}
+.fondo{position:fixed;inset:0;z-index:-3;background:linear-gradient(120deg,var(--bg),var(--g2),var(--bg));background-size:300% 300%;animation:mv 14s ease infinite}
+@keyframes mv{50%{background-position:100% 50%}}
+#part{position:fixed;inset:0;z-index:-2;pointer-events:none}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--c));z-index:50}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:12px 4%;background:var(--cd);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.logo{font-weight:700;font-size:1.2rem;color:var(--tx);text-decoration:none}.logo span{color:var(--c)}
+nav ul{display:flex;list-style:none;gap:14px;align-items:center}
+nav ul a{color:var(--tx);text-decoration:none;font-size:.9rem;padding-bottom:3px;border-bottom:2px solid transparent;transition:.3s}
+nav ul a:hover,nav ul a.on{color:var(--c);border-color:var(--c)}
+#tema,#menu{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:1rem}
+#menu{display:none;border-radius:8px}
+section{max-width:1080px;margin:auto;padding:90px 5% 20px}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.1;background:linear-gradient(90deg,var(--tx),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{color:var(--c);text-transform:uppercase;letter-spacing:2px;font-size:1.2rem;margin-bottom:24px}
+h2::after{content:"";display:block;width:60px;height:3px;margin-top:8px;background:var(--a);border-radius:3px}
+h2 small{display:block;text-transform:none;letter-spacing:0;color:var(--gr);font-weight:400;font-size:.9rem;margin-top:4px}
+.btn{display:inline-block;margin:6px 6px 6px 0;padding:12px 26px;border-radius:30px;border:2px solid var(--a);background:var(--a);color:#fff;text-decoration:none;cursor:pointer;font-size:1rem;font-family:inherit;transition:.3s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 8px 24px var(--a)}.btn.v{background:transparent;color:var(--tx)}
+#inicio{min-height:100vh;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.hola{color:var(--c);letter-spacing:3px}
+#typ{font-size:1.3rem;color:var(--c);min-height:36px;margin:12px 0 16px}
+.lema{color:var(--gr);max-width:580px;margin-bottom:18px}
+.foto{position:relative;width:230px;height:230px;border-radius:50%;padding:7px;animation:fl 4s ease-in-out infinite}
+.foto::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--c),var(--a),transparent,var(--c));animation:gi 4s linear infinite}
+.foto .in{position:relative;width:100%;height:100%;border-radius:50%;background:#2f3b52;color:#fff;display:grid;place-items:center;font-size:4rem;font-weight:700;overflow:hidden}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@keyframes gi{to{transform:rotate(360deg)}}@keyframes fl{50%{transform:translateY(-12px)}}
+.redes a{display:inline-grid;place-items:center;width:42px;height:42px;margin-right:8px;border-radius:50%;border:1px solid var(--bd);color:var(--tx);text-decoration:none;transition:.3s}
+.redes a:hover{background:var(--a);transform:translateY(-4px)}
+.rej{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.t{display:block;color:inherit;text-decoration:none;background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:22px;margin-bottom:16px;transition:transform .15s,border-color .3s}
+.rej .t,.dos .t{margin-bottom:0}.t:hover{border-color:var(--c)}
+.t h3{color:var(--c);margin:6px 0}.t small,.gr{color:var(--gr)}.t ul{padding-left:20px;margin-top:8px}
+.et{display:inline-block;padding:2px 12px;border-radius:12px;background:var(--a);color:#fff;font-size:.8rem}
+.ic{font-size:2.1rem}
+.chips span{display:inline-block;margin:4px;padding:6px 14px;border-radius:20px;border:1px solid var(--a);transition:.3s}
+.chips span:hover{background:var(--a);color:#fff;transform:translateY(-3px)}
+.cont{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.cont .t{text-align:center;margin:0}.num{font-size:2.3rem;font-weight:700;color:var(--c)}
+.fila{display:flex;justify-content:space-between;gap:10px}
+hr{border:0;border-top:1px solid var(--bd);margin:8px 0}
+.barra{background:var(--bd);height:10px;border-radius:10px;margin:6px 0 16px;overflow:hidden}
+.barra div{height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--c));transition:width 1.6s}
+.linea{border-left:3px solid var(--a);padding-left:26px;margin-left:8px}
+.linea .t{position:relative}
+.linea .t::before{content:"";position:absolute;left:-37px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.circ{display:flex;gap:30px;flex-wrap:wrap;justify-content:center}.circ>div{text-align:center}
+.anillo{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;margin:0 auto 8px;background:conic-gradient(var(--c) calc(var(--p,0)*1%),var(--bd) 0)}
+.anillo b{width:84px;height:84px;border-radius:50%;background:var(--bg);display:grid;place-items:center;color:var(--c)}
+.tabs button{margin:4px 6px 12px 0;padding:8px 20px;border-radius:20px;border:1px solid var(--a);background:transparent;color:var(--tx);cursor:pointer;transition:.3s}
+.tabs button.on,.tabs button:hover{background:var(--a);color:#fff}
+.panel{display:none}.panel.on{display:block;animation:su .5s}
+details{background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:14px 20px;margin-bottom:12px}
+summary{cursor:pointer;color:var(--c);font-weight:600}details p{margin-top:8px}
+form{display:grid;gap:12px;max-width:580px}
+input,textarea{padding:13px;border-radius:10px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);font-size:1rem;font-family:inherit}
+input:focus,textarea:focus{outline:2px solid var(--c)}
+.r{opacity:0}.r.v2{opacity:1;animation:su .9s backwards}
+@keyframes su{from{opacity:0;transform:translateY(36px)}}
+#sube{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:none;background:var(--a);color:#fff;font-size:1.3rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#sube.ver{opacity:1;pointer-events:auto}
+footer{text-align:center;padding:34px;color:var(--gr);font-size:.85rem}
+@media(max-width:900px){#menu{display:block}
+nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px;border-bottom:1px solid var(--bd)}
+nav ul.ab{display:flex}#inicio,.dos{grid-template-columns:1fr}#inicio{text-align:center;justify-items:center}}
+@media print{nav,.fondo,#part,#prog,#sube,.btn,form,.tabs,.redes{display:none!important}
+body{background:#fff;color:#000}.r{opacity:1}.panel{display:block}h1{color:#000;background:none}.t{border:1px solid #bbb;break-inside:avoid}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#inicio">Miguel<span>.</span>CV</a><button id="menu">☰</button>
+<ul id="en"><li><a href="#inicio">Inicio</a></li><li><a href="#sobre">Sobre mí</a></li><li><a href="#formacion">Formación</a></li><li><a href="#experiencia">Experiencia</a></li><li><a href="#competencias">Competencias</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#objetivos">Objetivos</a></li><li><a href="#contacto">Contacto</a></li><li><a data-go="portfolio" href="#">Portfolio</a></li><li><button id="tema"></button></li></ul></nav>
+
+<section id="inicio">
+<div class="foto"><div class="in">MP<img src="images/foto.jpg" alt="Miguel Pereira" onerror="this.remove()"></div></div>
+<div><p class="hola">HOLA, SOY</p><h1>Miguel Pereira Trinidad</h1>
+<p id="typ" data-f="Estudiante de ASIR|Administración de Sistemas Informáticos en Red|Redes · Sistemas · Virtualización|Responsable, puntual y con ganas de aprender"></p>
+<p class="lema">Estudiante de segundo curso de ASIR en U-tad. Me apasionan las redes, los sistemas operativos y la virtualización. Busco mi primera oportunidad en el sector IT para aprender, aportar y crecer profesionalmente.</p>
+<a class="btn" href="#contacto">Contáctame</a><a class="btn v" data-go="portfolio" href="#">Ver mi portfolio →</a><button class="btn v" onclick="window.print()">🖨️ Guardar PDF</button>
+<p class="redes" style="margin-top:14px"><a href="https://www.linkedin.com/in/miguel-pereira-trinidad" target="_blank" title="LinkedIn">in</a><a href="mailto:pereiratrinidadm@gmail.com" title="Correo">✉</a><a href="tel:640618792" title="Teléfono">☎</a></p></div>
+</section>
+
+<section><div class="cont r">
+<div class="t"><div class="num" data-n="2">0</div>Años de ciclo ASIR</div>
+<div class="t"><div class="num" data-n="455" data-s="h">0</div>Técnico Deportivo</div>
+<div class="t"><div class="num" data-n="5">0</div>Competencias digitales</div>
+<div class="t"><div class="num" data-n="2">0</div>Idiomas</div>
+<div class="t"><div class="num" data-n="4">0</div>Meses de experiencia</div>
+<div class="t"><div class="num" data-n="100" data-s="%">0</div>Compromiso</div></div></section>
+
+<section id="sobre"><h2>Sobre mí<small>Quién soy y qué me mueve</small></h2>
+<div class="dos">
+<div class="t r"><h3>Presentación</h3><p>Soy Miguel, de Guadarrama (Madrid). Estudio el Técnico Superior en Administración de Sistemas Informáticos en Red en U-tad, donde aprendo a instalar, configurar y mantener sistemas, redes y servidores.</p><p style="margin-top:10px">Me considero responsable, puntual y comprometido. Me gusta trabajar en equipo, resolver problemas y aprender cosas nuevas cada día. Mi experiencia como controlador de acceso y mi formación deportiva me han dado disciplina, trato con personas y capacidad de trabajar bajo responsabilidad.</p></div>
+<div class="t r"><h3>Datos personales</h3>
+<div class="fila"><span class="gr">📍 Ubicación</span><span>Guadarrama (Madrid)</span></div><hr>
+<div class="fila"><span class="gr">📞 Teléfono</span><span>640618792</span></div><hr>
+<div class="fila"><span class="gr">✉️ Correo</span><span>pereiratrinidadm@gmail.com</span></div><hr>
+<div class="fila"><span class="gr">🚗 Movilidad</span><span>Carnet y vehículo propio</span></div><hr>
+<div class="fila"><span class="gr">🕒 Disponibilidad</span><span>Horaria flexible</span></div><hr>
+<div class="fila"><span class="gr">🗣️ Idiomas</span><span>Español e inglés</span></div></div></div>
+<div class="rej" style="margin-top:18px">
+<div class="t r"><div class="ic">💻</div><h3>Informática</h3><p>Redes, sistemas operativos, virtualización y servidores web.</p></div>
+<div class="t r"><div class="ic">⚽</div><h3>Fútbol</h3><p>Técnico Deportivo: disciplina, liderazgo y trabajo en equipo.</p></div>
+<div class="t r"><div class="ic">🌱</div><h3>Aprendizaje</h3><p>Me formo de forma continua y me adapto rápido.</p></div>
+<div class="t r"><div class="ic">🤝</div><h3>Equipo</h3><p>Comunicación, respeto y compromiso con el grupo.</p></div></div></section>
+
+<section id="formacion"><h2>Formación<small>Mi recorrido académico</small></h2>
+<div class="linea">
+<div class="t r"><span class="et">2025 - 2027 · En curso</span><h3>Técnico Superior en Administración de Sistemas Informáticos en Red</h3><small>U-tad · Las Rozas de Madrid</small>
+<ul><li>Instalación y administración de sistemas operativos (Debian / Linux)</li><li>Redes informáticas y direccionamiento</li><li>Virtualización con máquinas virtuales</li><li>Servidores web: Apache y entorno LAMP</li><li>Publicación de webs con Git y GitHub Pages</li><li>Lenguajes de marcas: HTML, CSS y JavaScript</li></ul></div>
+<div class="t r"><span class="et">2023 - 2025</span><h3>Bachillerato · Ciencias Sociales</h3><small>Gredos San Diego · Guadarrama (Madrid)</small><ul><li>Análisis, organización del estudio y trabajo autónomo</li><li>Expresión y comunicación</li></ul></div>
+<div class="t r"><span class="et">455 horas</span><h3>Técnico Deportivo en Fútbol</h3><small>Asociación Formativa de Entrenadores Nacionales (AFEN) · Majadahonda (Madrid)</small><ul><li>Liderazgo y gestión de grupos</li><li>Planificación de entrenamientos</li><li>Trabajo en equipo y comunicación</li></ul></div></div>
+<h2 style="margin-top:36px">Módulos del ciclo<small>Lo que estudio en ASIR</small></h2>
+<div class="t r chips"><span>Implantación de sistemas operativos</span><span>Redes locales</span><span>Fundamentos de hardware</span><span>Gestión de bases de datos</span><span>Lenguajes de marcas</span><span>Servicios de red e Internet</span><span>Seguridad informática</span><span>Administración de sistemas</span></div></section>
+
+<section id="experiencia"><h2>Experiencia profesional<small>Mi trayectoria laboral</small></h2>
+<div class="linea"><div class="t r"><span class="et">Junio 2025 - Septiembre 2025</span><h3>Portero y controlador de acceso</h3><small>Limgesma · Guadarrama (Madrid)</small>
+<ul><li>Revisión de autorizaciones de entrada</li><li>Control de personal</li><li>Mantenimiento de zonas comunes</li><li>Atención directa a residentes y visitantes</li></ul></div></div>
+<h2 style="margin-top:34px">Lo que me ha aportado</h2>
+<div class="rej">
+<div class="t r"><div class="ic">🛡️</div><h3>Responsabilidad</h3><p>Control de accesos y cumplimiento de normas.</p></div>
+<div class="t r"><div class="ic">🤝</div><h3>Trato con personas</h3><p>Atención y comunicación con el personal.</p></div>
+<div class="t r"><div class="ic">⏰</div><h3>Puntualidad</h3><p>Cumplimiento de horarios y turnos.</p></div>
+<div class="t r"><div class="ic">🔧</div><h3>Mantenimiento</h3><p>Cuidado y supervisión de zonas comunes.</p></div>
+<div class="t r"><div class="ic">🧠</div><h3>Resolución</h3><p>Decisiones rápidas ante imprevistos.</p></div>
+<div class="t r"><div class="ic">📋</div><h3>Organización</h3><p>Control y registro de tareas diarias.</p></div></div></section>
+
+<section id="competencias"><h2>Competencias<small>Lo que sé hacer y cómo soy</small></h2>
+<div class="tabs"><button class="on" data-p="p1">Digitales</button><button data-p="p2">Profesionales</button><button data-p="p3">Personales</button><button data-p="p4">Idiomas</button></div>
+<div class="panel on" id="p1"><div class="t">
+<div class="fila"><span>Redes informáticas</span><span>70%</span></div><div class="barra"><div data-n="70"></div></div>
+<div class="fila"><span>Sistemas operativos</span><span>75%</span></div><div class="barra"><div data-n="75"></div></div>
+<div class="fila"><span>Virtualización</span><span>70%</span></div><div class="barra"><div data-n="70"></div></div>
+<div class="fila"><span>Redes sociales</span><span>85%</span></div><div class="barra"><div data-n="85"></div></div>
+<div class="fila"><span>Aprendizaje informático</span><span>80%</span></div><div class="barra"><div data-n="80"></div></div>
+<div class="fila"><span>Apache / LAMP</span><span>60%</span></div><div class="barra"><div data-n="60"></div></div>
+<div class="fila"><span>HTML, CSS y JavaScript</span><span>55%</span></div><div class="barra"><div data-n="55"></div></div>
+<div class="fila"><span>Git y GitHub</span><span>50%</span></div><div class="barra"><div data-n="50"></div></div></div></div>
+<div class="panel" id="p2"><div class="t chips"><span>Responsabilidad</span><span>Trabajo en equipo</span><span>Adaptabilidad</span><span>Compromiso</span><span>Aprendizaje</span><span>Control de personal</span><span>Atención al público</span></div></div>
+<div class="panel" id="p3"><div class="t chips"><span>Responsabilidad</span><span>Puntualidad</span><span>Disponibilidad</span><span>Compromiso</span><span>Respeto</span><span>Constancia</span><span>Liderazgo</span></div></div>
+<div class="panel" id="p4"><div class="t circ"><div><div class="anillo" data-n="100"><b>100%</b></div>Español<br><small class="gr">Nativo</small></div><div><div class="anillo" data-n="55"><b>55%</b></div>Inglés<br><small class="gr">Intermedio</small></div></div></div>
+<h2 style="margin-top:36px">Herramientas<small>Con lo que trabajo</small></h2>
+<div class="t chips r"><span>Debian</span><span>Windows</span><span>Apache</span><span>Git</span><span>GitHub</span><span>GitHub Pages</span><span>VirtualBox</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Terminal Linux</span><span>nano</span><span>SSH</span></div></section>
+
+<section id="proyectos"><h2>Proyectos académicos<small>Prácticas realizadas durante el ciclo</small></h2>
+<div class="rej">
+<div class="t r"><div class="ic">🖥️</div><h3>Servidor LAMP en Debian</h3><p>Dos webs estáticas en Apache sin dominio, con VirtualHosts por puerto (8081 y 8082).</p><span class="et">Servidores</span></div>
+<div class="t r"><div class="ic">🚀</div><h3>Despliegue en GitHub Pages</h3><p>Publicación del CV y el portfolio en un hosting externo con Git.</p><span class="et">Web</span></div>
+<div class="t r"><div class="ic">🎨</div><h3>CV y portfolio web</h3><p>Dos webs animadas con HTML, CSS y JavaScript, con modo claro y oscuro.</p><span class="et">Web</span></div>
+<div class="t r"><div class="ic">📦</div><h3>Máquinas virtuales</h3><p>Instalación y configuración de sistemas en VirtualBox.</p><span class="et">Virtualización</span></div></div>
+<p style="margin-top:20px"><a class="btn" data-go="portfolio" href="#">Ver todos en mi portfolio →</a></p></section>
+
+<section id="objetivos"><h2>Objetivos<small>Lo que busco</small></h2>
+<div class="t r">Mi objetivo es incorporarme al mundo laboral para fortalecer mis competencias, alcanzar independencia y estabilidad económica, y aportar valor a una organización que promueva el aprendizaje y el desarrollo profesional.</div>
+<div class="rej" style="margin-top:18px">
+<div class="t r"><div class="ic">🕒</div><h3>Disponibilidad</h3><p>Horaria flexible.</p></div>
+<div class="t r"><div class="ic">🚗</div><h3>Movilidad</h3><p>Dentro de la provincia, con carnet y vehículo propio.</p></div>
+<div class="t r"><div class="ic">🎯</div><h3>Interés</h3><p>Administración de sistemas, redes y soporte técnico.</p></div>
+<div class="t r"><div class="ic">📈</div><h3>Futuro</h3><p>Crecer en IT: sistemas, redes y ciberseguridad.</p></div></div>
+<h2 style="margin-top:36px">Preguntas rápidas</h2>
+<details><summary>¿Estás disponible para trabajar?</summary><p>Sí, con disponibilidad horaria flexible.</p></details>
+<details><summary>¿Puedes desplazarte?</summary><p>Sí, dentro de la provincia, con carnet de conducir y vehículo propio.</p></details>
+<details><summary>¿Qué estás estudiando?</summary><p>El Técnico Superior en ASIR en U-tad (2025-2027).</p></details>
+<details><summary>¿Tienes experiencia laboral?</summary><p>Sí, como portero y controlador de acceso en Limgesma (junio-septiembre 2025).</p></details>
+<details><summary>¿Dónde puedo ver tus proyectos?</summary><p>En mi <a data-go="portfolio" href="#" style="color:var(--c)">portfolio</a>.</p></details></section>
+
+<section id="contacto"><h2>Contacto<small>Hablemos</small></h2>
+<div class="rej">
+<div class="t r"><div class="ic">📞</div><h3>Teléfono</h3>640618792</div>
+<div class="t r"><div class="ic">✉️</div><h3>Correo</h3>pereiratrinidadm@gmail.com</div>
+<div class="t r"><div class="ic">📍</div><h3>Ubicación</h3>Guadarrama (Madrid)</div>
+<a class="t r" href="https://www.linkedin.com/in/miguel-pereira-trinidad" target="_blank"><div class="ic">🔗</div><h3>LinkedIn</h3>miguel-pereira-trinidad</a></div>
+<h2 style="margin-top:36px">Escríbeme</h2>
+<form class="r"><input id="fn" placeholder="Tu nombre" required><input id="fc" type="email" placeholder="Tu correo" required><textarea id="fm" rows="5" placeholder="Tu mensaje" required></textarea><button class="btn" type="submit">Enviar por correo</button></form></section>
+<footer>© 2026 Miguel Pereira Trinidad · ASIR 2 · U-tad</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+document.body.prepend(Object.assign(document.createElement("div"),{className:"fondo"}));
+const cv=Object.assign(document.createElement("canvas"),{id:"part"});document.body.prepend(cv);
+const pg=Object.assign(document.createElement("div"),{id:"prog"});document.body.prepend(pg);
+const up=Object.assign(document.createElement("button"),{id:"sube",textContent:"↑"});document.body.append(up);
+up.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+const bt=$("#tema");try{if(localStorage.getItem("tema-cv")==="claro")document.body.classList.add("claro")}catch(e){}
+const ico=()=>bt.textContent=document.body.classList.contains("claro")?"☀️":"🌙";ico();
+bt.onclick=()=>{document.body.classList.toggle("claro");try{localStorage.setItem("tema-cv",document.body.classList.contains("claro")?"claro":"oscuro")}catch(e){}ico()};
+const en=$("#en");$("#menu").onclick=()=>en.classList.toggle("ab");en.querySelectorAll("a").forEach(a=>a.onclick=()=>en.classList.remove("ab"));
+const secs=$$("section[id]");
+addEventListener("scroll",()=>{const h=document.documentElement.scrollHeight-innerHeight;
+pg.style.width=(h>0?scrollY/h*100:0)+"%";up.classList.toggle("ver",scrollY>400);
+let a="inicio";secs.forEach(s=>{if(scrollY>=s.offsetTop-160)a=s.id});
+en.querySelectorAll("a[href^='#']").forEach(x=>x.classList.toggle("on",x.getAttribute("href")==="#"+a))});
+function contar(el){const m=+el.dataset.n,s=el.dataset.s||"";let n=0;const p=Math.max(1,Math.ceil(m/60));const t=setInterval(()=>{n+=p;if(n>=m){n=m;clearInterval(t)}el.textContent=n+s},30)}
+function anillo(el){const m=+el.dataset.n;let n=0;const t=setInterval(()=>{n+=2;if(n>=m){n=m;clearInterval(t)}el.style.setProperty("--p",n)},20)}
+function animar(c){c.querySelectorAll(".barra div").forEach(b=>b.style.width=b.dataset.n+"%");c.querySelectorAll(".num").forEach(contar);c.querySelectorAll(".anillo").forEach(anillo)}
+const ob=new IntersectionObserver(l=>l.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("v2");animar(e.target);ob.unobserve(e.target)}),{threshold:.1});
+$$(".r").forEach(e=>ob.observe(e));ob.observe($("#p1"));
+$$(".tabs button").forEach(b=>b.onclick=()=>{$$(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+$$(".panel").forEach(p=>p.classList.remove("on"));const p=$("#"+b.dataset.p);p.classList.add("on");
+p.querySelectorAll(".barra div").forEach(x=>x.style.width="0");setTimeout(()=>animar(p),50)});
+$$(".t").forEach(t=>{t.addEventListener("mousemove",e=>{const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+t.style.transform=`perspective(700px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`});t.addEventListener("mouseleave",()=>t.style.transform="")});
+const ty=$("#typ"),fr=ty.dataset.f.split("|");let f=0,l=0,bo=false;
+(function w(){const s=fr[f];ty.textContent=s.substring(0,l)+"▌";if(!bo){l++;if(l>s.length){bo=true;setTimeout(w,1500);return}}else{l--;if(l===0){bo=false;f=(f+1)%fr.length}}setTimeout(w,bo?35:75)})();
+$("form").onsubmit=e=>{e.preventDefault();location.href="mailto:pereiratrinidadm@gmail.com?subject="+encodeURIComponent("Contacto desde tu CV - "+$("#fn").value)+"&body="+encodeURIComponent($("#fm").value+"\n\n"+$("#fn").value+" ("+$("#fc").value+")")};
+$$("[data-go]").forEach(a=>{
+  if(location.port){a.href="http://"+location.hostname+":8082/";}
+  else{a.href=location.pathname.replace(/\/cv(\/index\.html|\/)?$/,"/portfolio/");}
+});
+const cx=cv.getContext("2d");let W,H;const P=[];const aj=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};aj();addEventListener("resize",aj);
+for(let i=0;i<65;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5});
+(function d(){cx.clearRect(0,0,W,H);const c=getComputedStyle(document.body).getPropertyValue("--c").trim();cx.fillStyle=c;cx.strokeStyle=c;
+P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;cx.globalAlpha=.6;cx.beginPath();cx.arc(p.x,p.y,2,0,7);cx.fill();
+for(let j=i+1;j<P.length;j++){const q=P[j],k=Math.hypot(p.x-q.x,p.y-q.y);if(k<110){cx.globalAlpha=.15*(1-k/110);cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}});requestAnimationFrame(d)})();
+</script>
+</body>
+</html>
